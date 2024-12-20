@@ -2,8 +2,6 @@
 
 import tkinter
 import random
-import threading
-from playsound import playsound
 import pygame
 
 ROWS = 25
@@ -20,12 +18,25 @@ class Tile:
         self.y = y
 
 
-# Initialize pygame.mixer for music
+# Initialize pygame.mixer for music and sounds
 pygame.mixer.init()
-pygame.mixer.music.load("8bitmusic.mp3")
-pygame.mixer.music.set_volume(0.5)
-pygame.mixer.music.play(loops=-1)  # Loop indefinitely
 
+# Load background music
+try:
+    pygame.mixer.music.load("8bitmusic.mp3")
+    pygame.mixer.music.set_volume(0.5)
+    pygame.mixer.music.play(loops=-1)  # Loop indefinitely
+except FileNotFoundError:
+    print("Background music file '8bitmusic.mp3' not found.")
+
+# Load sound effects
+try:
+    crunch_sound = pygame.mixer.Sound("crunch.wav")
+    crunch_sound.set_volume(1)
+    gameover_sound = pygame.mixer.Sound("gameover.wav")
+    gameover_sound.set_volume(1)
+except FileNotFoundError as e:
+    print(f"Sound file not found: {e}")
 
 # Game window setup
 window = tkinter.Tk()
@@ -56,14 +67,6 @@ velocityX = 0
 velocityY = 0
 game_over = False
 score = 0
-
-
-def play_crunch_sound():
-    threading.Thread(target=playsound, args=("crunch.wav",), daemon=True).start()
-
-
-def play_gameover_sound():
-    threading.Thread(target=playsound, args=("gameover.wav",), daemon=True).start()
 
 
 def change_direction(e):
@@ -117,12 +120,16 @@ def move():
     # Check for collisions with walls
     if snake.x < 0 or snake.x >= WINDOW_WIDTH or snake.y < 0 or snake.y >= WINDOW_HEIGHT:
         game_over = True
+        if gameover_sound:
+            gameover_sound.play()
         return
 
     # Check for collisions with the snake's own body
     for tile in snake_body:
         if snake.x == tile.x and snake.y == tile.y:
             game_over = True
+            if gameover_sound:
+                gameover_sound.play()
             return
 
     # Check for snake and food collision
@@ -132,8 +139,9 @@ def move():
         food.y = random.randint(0, ROWS - 1) * TILE_SIZE
         score += 1
 
-        # sound effect when food is eaten
-        play_crunch_sound()
+        # Play crunch sound
+        if crunch_sound:
+            crunch_sound.play()
 
     # Move each segment to the position of the previous segment
     for i in range(len(snake_body)-1, -1, -1):
@@ -172,9 +180,6 @@ def draw():
     # Display game over text, play sound, and give restart instructions
     if game_over:
         pygame.mixer.music.stop()  # Stop the background music
-
-        play_gameover_sound()
-
         canvas.create_text(WINDOW_WIDTH / 2, WINDOW_HEIGHT / 2, font="Arial 20", text=f"Game Over! Score: {score}",
                            fill="white")
         canvas.create_text(WINDOW_WIDTH / 2, WINDOW_HEIGHT / 2 + 20, font="Arial 15",
