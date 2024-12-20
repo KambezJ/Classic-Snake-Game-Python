@@ -26,7 +26,7 @@ This project is a modern rendition of the classic Snake game, built entirely in 
 
 ### Enhancements
 - **Centered Game Window**
-  - The game window is dynamically centered on the user's screen for better user experience.
+  - The game window is dynamically centered on the user's screen for a better user experience.
 - **Customizable Settings**
   - Easily modify grid size, tile size, or game speed by adjusting constants.
 
@@ -34,7 +34,7 @@ This project is a modern rendition of the classic Snake game, built entirely in 
 1. Use the **arrow keys** to control the snake's movement.
 2. Avoid colliding with the walls or your own body.
 3. Eat the red food to grow the snake and increase your score.
-4. Press **spacebar** to restart the game after a game over.
+4. Press **spacebar** to restart the game after the game is over.
 
 ## Screenshots
 
@@ -43,7 +43,7 @@ This project is a modern rendition of the classic Snake game, built entirely in 
 ## Getting Started
 
 ### Prerequisites
-- Python 3.9 or later
+- Python 3.9 or 3.11 (those two are confirmed to be compatible with the dependencies/packages)
 - Required libraries:
   - `pygame`
   - `playsound`
@@ -93,7 +93,6 @@ python snake_game.py
   |-- 8bitmusic.mp3          # Background music file
   |-- crunch.wav             # Sound effect for eating food
   |-- gameover.wav           # Sound effect for game over
-  |-- README.md              # Project documentation
 ```
 
 ## Future Enhancements
@@ -123,6 +122,10 @@ python snake_game.py
    - Generating random grid positions for food placement.
 6. **Algorithmic Thinking:**
    - Efficiently updating the snake's movement and detecting collisions.
+7. **Collision Detection:**
+   - The game includes logic to detect collisions with walls, the snake's own body, and the food.
+8. **File Handling (Audio Playback):**
+   - Python libraries playsound and pygame are used for playing background music and sound effects.
 
 ### Additional Skills
 - **Game State Management:**
