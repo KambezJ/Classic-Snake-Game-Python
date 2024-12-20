@@ -5,7 +5,7 @@ This project is a modern rendition of the classic Snake game, built entirely in 
 
 - **Real-Time Animation:** Smooth snake movement and dynamic food placement rendered on a grid-based canvas.
 - **Interactive Gameplay:** Direction control using arrow keys and a restart option upon game over.
-- **Sound Effects and Background Music:** Implemented using `pygame` and `playsound` for an immersive experience.
+- **Sound Effects and Background Music:** Implemented using `pygame` for an immersive experience.
 - **Dynamic UI:** Real-time score tracking and responsive game-over messages displayed on-screen.
 
 ## Features
@@ -46,7 +46,6 @@ This project is a modern rendition of the classic Snake game, built entirely in 
 - Python 3.9 or 3.11 (those two are confirmed to be compatible with the dependencies/packages)
 - Required libraries:
   - `pygame`
-  - `playsound`
 
 ### Installation
 1. Clone the repository:
@@ -56,7 +55,7 @@ This project is a modern rendition of the classic Snake game, built entirely in 
    ```
 2. Install the required dependencies:
    ```bash
-   pip install pygame playsound
+   pip install pygame
    ```
 3. Place your sound files (`8bitmusic.mp3`, `crunch.wav`, `gameover.wav`) in the project directory.
 
@@ -125,13 +124,13 @@ python snake_game.py
 7. **Collision Detection:**
    - The game includes logic to detect collisions with walls, the snake's own body, and the food.
 8. **File Handling (Audio Playback):**
-   - Python libraries playsound and pygame are used for playing background music and sound effects.
+   - Python library pygame is used for playing background music and sound effects.
 
 ### Additional Skills
 - **Game State Management:**
   - Managing and updating the game's dynamic state variables (e.g., `score`, `game_over`).
 - **File Handling for Audio Playback:**
-  - Integration of `pygame` and `playsound` for background music and effects.
+  - Integration of `pygame` for background music and effects.
 
 ## Acknowledgements
 - Background music from pixabay.
