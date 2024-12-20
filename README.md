@@ -134,9 +134,5 @@ python snake_game.py
   - Integration of `pygame` and `playsound` for background music and effects.
 
 ## Acknowledgements
-- Background music from [source/credit].
-- Sound effects from [source/credit].
-
-## License
-This project is licensed under the MIT License - see the LICENSE file for details.
-
+- Background music from pixabay.
+- Sound effects from pixabay.
