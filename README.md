@@ -1,4 +1,4 @@
-# Snake Game v2: A Classic Snake Game Built with Python and Tkinter
+# Snake Game Built with Python and Tkinter
 
 <img src="https://i.imgur.com/BdJG4d2.png" height="50%" width="50%" alt="Game End"/>
 
