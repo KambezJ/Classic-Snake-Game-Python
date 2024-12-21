@@ -1,5 +1,7 @@
 # Snake Game v2: A Classic Snake Game Built with Python and Tkinter
 
+<img src="https://i.imgur.com/BdJG4d2.png" height="50%" width="50%" alt="Game End"/>
+
 ## Overview
 This project is a modern rendition of the classic Snake game, built entirely in Python using the Tkinter library for GUI development. It showcases essential programming skills such as GUI programming, event-driven logic, and game state management. The game features:
 
@@ -36,10 +38,7 @@ This project is a modern rendition of the classic Snake game, built entirely in 
 3. Eat the red food to grow the snake and increase your score.
 4. Press **spacebar** to restart the game after the game is over.
 
-## Screenshots
-
 <img src="https://i.imgur.com/t4r8Vgp.png" height="50%" width="50%" alt="Game Start"/> 
-<img src="https://i.imgur.com/BdJG4d2.png" height="50%" width="50%" alt="Game End"/>
 
 ## Getting Started
 
