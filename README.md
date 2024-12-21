@@ -38,32 +38,14 @@ This project is a modern rendition of the classic Snake game, built entirely in 
 
 ## Screenshots
 
-<img src="https://i.imgur.com/t4r8Vgp.png" height="50%" width="50%" alt="Game Start"/> <img src="https://i.imgur.com/BdJG4d2.png" height="50%" width="50%" alt="Game End"/>
+<img src="https://i.imgur.com/t4r8Vgp.png" height="50%" width="50%" alt="Game Start"/> 
+<img src="https://i.imgur.com/BdJG4d2.png" height="50%" width="50%" alt="Game End"/>
 
 ## Getting Started
 
 ### Prerequisites
 - Python 3.9 or 3.11 (those two are confirmed to be compatible with the dependencies/packages)
-- Required libraries:
-  - `pygame`
-
-### Installation
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/snake-game-v2.git
-   cd snake-game-v2
-   ```
-2. Install the required dependencies:
-   ```bash
-   pip install pygame
-   ```
-3. Place your sound files (`8bitmusic.mp3`, `crunch.wav`, `gameover.wav`) in the project directory.
-
-### Running the Game
-Run the `snake_game.py` file:
-```bash
-python snake_game.py
-```
+- Pygame, Tkinter
 
 ## Code Overview
 
@@ -84,15 +66,6 @@ python snake_game.py
 #### 4. **Sound Effects**
 - Background music is played continuously using `pygame.mixer`.
 - Sound effects for food consumption and game over are triggered asynchronously using `threading`.
-
-### File Structure
-```
-/project-folder
-  |-- snake_game.py          # Main game logic
-  |-- 8bitmusic.mp3          # Background music file
-  |-- crunch.wav             # Sound effect for eating food
-  |-- gameover.wav           # Sound effect for game over
-```
 
 ## Future Enhancements
 1. **Levels and Difficulty**
