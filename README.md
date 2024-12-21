@@ -38,8 +38,7 @@ This project is a modern rendition of the classic Snake game, built entirely in 
 
 ## Screenshots
 
-<img src="https://i.imgur.com/t4r8Vgp.png" height="50%" width="50%" alt="Game Start"/>   
-
+<img src="https://i.imgur.com/t4r8Vgp.png" height="50%" width="50%" alt="Game Start"/> <img src="https://i.imgur.com/BdJG4d2.png" height="50%" width="50%" alt="Game End"/>
 
 ## Getting Started
 
